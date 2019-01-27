@@ -8,7 +8,7 @@ fi
 
 cd $GITHUB_WORKSPACE
 DOCKERFILE="${DOCKERFILE:-./Dockerfile}"
-if [[ -f $DOCKERFILE ]]; then
+if [[ ! -f $DOCKERFILE ]]; then
 	echo $DOCKERFILE not found. Exiting.
 	exit 1
 fi
