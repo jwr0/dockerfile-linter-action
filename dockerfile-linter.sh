@@ -8,7 +8,8 @@ if [[ -z "$GITHUB_TOKEN" ]]; then
 	exit 1
 fi
 
-DOCKERFILE=${$GITHUB_WORKSPACE/$DOCKERFILE:$GITHUB_WORKSPACE/Dockerfile}
+cd $GITHUB_WORKSPACE
+DOCKERFILE="${DOCKERFILE:-./Dockerfile}"
 echo $DOCKERFILE
 set +e
 OUTPUT=$(/dockerfilelint/bin/dockerfilelint $DOCKERFILE)
