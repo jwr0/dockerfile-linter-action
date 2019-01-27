@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
-set -o pipefail
+
+echo Starting the script
 
 if [[ -z "$GITHUB_TOKEN" ]]; then
 	echo "The GITHUB_TOKEN is required."
