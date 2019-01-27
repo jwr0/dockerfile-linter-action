@@ -2,17 +2,8 @@
 set -e
 set -o pipefail
 
-if [[ ! -z "$TOKEN" ]]; then
-	GITHUB_TOKEN=$TOKEN
-fi
-
 if [[ -z "$GITHUB_TOKEN" ]]; then
-	echo "Set the GITHUB_TOKEN env variable."
-	exit 1
-fi
-
-if [[ -z "$GITHUB_REPOSITORY" ]]; then
-	echo "Set the GITHUB_REPOSITORY env variable."
+	echo "The GITHUB_TOKEN is required."
 	exit 1
 fi
 
