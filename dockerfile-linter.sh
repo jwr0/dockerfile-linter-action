@@ -13,7 +13,7 @@ if [[ ! -f $DOCKERFILE ]]; then
 	exit 1
 fi
 set +e
-OUTPUT=$(/dockerfilelint/bin/dockerfilelint $DOCKERFILE)
+OUTPUT=$(/dockerfilelint/bin/dockerfilelint "$DOCKERFILE")
 SUCCESS=$?
 echo $OUTPUT
 set -e
