@@ -3,7 +3,7 @@ A GitHub action for linting Dockerfiles and commenting on a PR with any errors.
 
 ## Usage
 
-You should have something like this in your `./github/main.workflow`:
+You should have something like this in your `.github/main.workflow`:
 ```
 workflow "on pull request, Dockerfile lint" {
   on = "pull_request"
