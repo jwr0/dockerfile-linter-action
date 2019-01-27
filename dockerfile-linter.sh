@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-echo Starting the script
-
 if [[ -z "$GITHUB_TOKEN" ]]; then
 	echo "The GITHUB_TOKEN is required."
 	exit 1
@@ -10,7 +8,10 @@ fi
 
 cd $GITHUB_WORKSPACE
 DOCKERFILE="${DOCKERFILE:-./Dockerfile}"
-echo $DOCKERFILE
+if [[ -f $DOCKERFILE ]]; then
+	echo $DOCKERFILE not found. Exiting.
+	exit 1
+fi
 set +e
 OUTPUT=$(/dockerfilelint/bin/dockerfilelint $DOCKERFILE)
 SUCCESS=$?
