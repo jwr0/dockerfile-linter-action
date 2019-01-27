@@ -30,7 +30,7 @@ leave any comment.
 
 ## Underlying project
 
-This GitHub Action repository simply packages up other software to make them usable in the context of GitHub Actions. Specifically, the logic used by the Dockerfile linter comes from another project: [replicatedhq/dockerfilelint](https://github.com/replicatedhq/dockerfilelint).
+This GitHub Action repository simply packages up other software to make them usable in the context of GitHub Actions. Specifically, the logic used by the Dockerfile linter comes from another project: [replicatedhq/dockerfilelint](https://github.com/replicatedhq/dockerfilelint). They also offer a web-based linter at [fromlatest.io](https://www.fromlatest.io/)
 
 ## Issues
 
