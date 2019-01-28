@@ -1,4 +1,6 @@
 # dockerfile-linter-action
+<a href="https://github-actions.netlify.com/docker-linter"><img src="https://img.shields.io/badge/as%20seen%20on%20-GitHubActions-blue.svg" alt=“GitHub-actions”></a>  
+
 A GitHub action for linting Dockerfiles and commenting on a PR with any errors.
 
 ## Usage
